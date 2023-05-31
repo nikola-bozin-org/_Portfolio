@@ -1,0 +1,49 @@
+.app{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.nikolaBozin{
+    font-size: 2rem;
+    font-size: clamp(2rem, 0.20000000000000018rem + 9vw, 11rem);
+    position: absolute;
+    top: 10%;
+    white-space: nowrap;
+    background: linear-gradient(to bottom, gray 60%, transparent 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.softwareDeveloper{
+    padding: 0 0.2rem;
+    white-space: nowrap;
+    font-size: 2rem;
+    font-size: clamp(2rem, 0.20000000000000018rem + 9vw, 11rem);
+    position: absolute;
+    top: 18%;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.692);
+}
+
+
+@media (max-width:580px){
+    .nikolaBozin{
+        top: 40%;
+    }
+    .softwareDeveloper{
+        top:45%;
+    }
+}
+
+@media (max-width:580px){
+    .softwareDeveloper{
+        text-align: center;
+        white-space: unset;
+    }
+}
