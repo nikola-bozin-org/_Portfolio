@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import React from 'react';
 import { useEffect } from 'react';
 import Card from './Card/Card';
+import Fillbar from './Fillbar/Fillbar'
 
 
 const frontendBulletpoints = [
@@ -30,6 +31,16 @@ const web3Bulletpoints = [
   "Building on Substrate based chains using Rust",
 ]
 
+
+//fe utility
+//framer motion, aos, resize observer, react native, electron,nextjs skeleton screen
+
+//be utility
+//docker, websockets, graphQL, nginx, certbot, pm2, 
+
+//web3 utility
+//Ethers, nextjs, polkadot ink!, metamask, truffle, ipfs, web3js
+
 function App() {
   
   useEffect(()=>{
@@ -45,6 +56,7 @@ function App() {
         <Card flipAnimationName={'flip2'} title={'Backend Developer'} bulletpoints={backendBulletpoints}/>
         <Card flipAnimationName={'flip3'} title={'Web3 Developer'} bulletpoints={web3Bulletpoints} />
       </div>
+      {/*<Fillbar percentage={50} />*/}
     </div>
   );
 }

@@ -1,0 +1,15 @@
+.fillbarContainer {
+    height: 20px;
+    width: 100%;
+    background-color: #e0e0de;
+    margin: 10px;
+    position: absolute;
+    top: 110%;
+  }
+  
+  .filler {
+    height: 100%;
+    background-color: #6a1b9a;
+    border-radius: inherit;
+    transition: width 1s ease-in-out;
+  }
