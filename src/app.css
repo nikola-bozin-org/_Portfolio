@@ -1,5 +1,5 @@
 .app{
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -31,19 +31,12 @@
     text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.692);
 }
 
-
-@media (max-width:580px){
-    .nikolaBozin{
-        top: 40%;
-    }
-    .softwareDeveloper{
-        top:45%;
-    }
-}
-
-@media (max-width:580px){
-    .softwareDeveloper{
-        text-align: center;
-        white-space: unset;
-    }
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+    position: relative;
+    top: 130px;
 }

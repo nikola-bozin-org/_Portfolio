@@ -1,0 +1,26 @@
+.card{
+    transform: rotateY(0deg);
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    color: rgb(55, 55, 55);
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    max-width: 450px;
+
+    .bold{
+        font-weight: bold;
+    }
+
+    .cardTitle{
+        padding-bottom: 1rem;
+    }
+
+    .bulletpoint{
+        font-size: 1.3rem;
+    }
+
+    li{
+        padding: 0.2rem;
+    }
+}
