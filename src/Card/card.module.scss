@@ -48,17 +48,17 @@
     animation-delay: 1s;
   }
   
-  .flip2 {
+.flip2 {
     animation: flip 0.4s ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 1.5s;
-  }
+}
   
-  .flip3 {
+.flip3 {
     animation: flip 0.4s ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 2s;
-  }
+}
 
 
 
@@ -66,6 +66,7 @@
     animation: rotateY 0.3s linear both;
     transform-style: preserve-3d;
     color: white;
+    box-shadow: unset;
   }
 
   .reverseFlippedCard {

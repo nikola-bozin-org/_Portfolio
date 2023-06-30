@@ -33,6 +33,7 @@ const web3Bulletpoints = [
 
 
 //fe utility
+//eljs connecting mainprocessor with render processor
 //framer motion, aos, resize observer, react native, electron,nextjs skeleton screen
 
 //be utility
