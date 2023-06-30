@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    overflow: hidden;
     position: relative;
 }
 
@@ -37,6 +36,15 @@
     justify-content: space-around;
     gap: 1rem;
     width: 100%;
-    position: relative;
-    top: 130px;
+    position: absolute;
+    top: 45%;
+    flex-wrap: wrap;
+    padding-bottom: 1rem;
+}
+
+@media (max-width:370px){
+    .softwareDeveloper{
+        text-align: center;
+        white-space: unset;
+    }
 }

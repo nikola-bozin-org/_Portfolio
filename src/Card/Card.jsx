@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './card.module.scss';
 
-const Card = ({ title, bulletpoints = [], utilities = [] }) => {
-    const wordsToHighlight = ["APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
+const Card = ({ title,flipAnimationName, bulletpoints = [], utilities = [] }) => {
+    const wordsToHighlight = ["Substrate","Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart","Contracts", "Solidity","JWT","OAuth", "authorization","authentication", "MongoDB", "oriented", "data", "reliable ", "secure","efficient", "express","Nodejs","APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
 
     const highlightWords = (sentence) => {
         const words = sentence.split(' ');
@@ -12,9 +12,8 @@ const Card = ({ title, bulletpoints = [], utilities = [] }) => {
                 : word + ' '
         );
     }
-
     return (
-        <div className={styles.card}>
+        <div className={`${styles.card} ${styles[flipAnimationName]}`}>
             <h1 className={styles.cardTitle}>{title}</h1>
             <ul className={styles.bulletpoint} style={{ textAlign: 'start' }} >
                 {bulletpoints.map((point, index) => (
