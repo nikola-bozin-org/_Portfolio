@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import styles from './card.module.scss';
 
 
-const Card = ({ title,flipAnimationName, bulletpoints = [], utilities = [] }) => {
-    const wordsToHighlight = ["Substrate","Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart","Contracts", "Solidity","JWT","OAuth", "authorization","authentication", "MongoDB", "oriented", "data", "reliable ", "secure","efficient", "express","Nodejs","APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
+const Card = ({ title,flipAnimationName,wordsToHighlight, bulletpoints = [], utilities = [] }) => {
     const [hovered, setHovered] = useState(false);
     const [loaded,setLoaded] = useState(false);
-
     const highlightWords = (sentence) => {
         const words = sentence.split(' ');
         return words.map((word, i) =>
@@ -15,7 +13,6 @@ const Card = ({ title,flipAnimationName, bulletpoints = [], utilities = [] }) =>
                 : word + ' '
         );
     }
-
     useEffect(()=>{
         const binding ={
             'flip1':1000,

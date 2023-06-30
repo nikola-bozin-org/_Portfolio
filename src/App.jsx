@@ -32,6 +32,7 @@ const web3Bulletpoints = [
 ]
 
 
+
 //fe utility
 //eljs connecting mainprocessor with render processor
 //framer motion, aos, resize observer, react native, electron,nextjs skeleton screen
@@ -41,6 +42,9 @@ const web3Bulletpoints = [
 
 //web3 utility
 //Ethers, nextjs, polkadot ink!, metamask, truffle, ipfs, web3js
+
+const wordsToHighlight = ["Substrate","Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart","Contracts", "Solidity","JWT","OAuth", "authorization","authentication", "MongoDB", "oriented", "data", "reliable ", "secure","efficient", "express","Nodejs","APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
+
 
 function App() {
   
@@ -53,9 +57,9 @@ function App() {
       <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
       <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
       <div className='cards'>
-        <Card flipAnimationName={'flip1'} title={'Frontend Developer'} bulletpoints={frontendBulletpoints}/>
-        <Card flipAnimationName={'flip2'} title={'Backend Developer'} bulletpoints={backendBulletpoints}/>
-        <Card flipAnimationName={'flip3'} title={'Web3 Developer'} bulletpoints={web3Bulletpoints} />
+        <Card wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend Developer'} bulletpoints={frontendBulletpoints}/>
+        <Card wordsToHighlight={wordsToHighlight} flipAnimationName={'flip2'} title={'Backend Developer'} bulletpoints={backendBulletpoints}/>
+        <Card wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3 Developer'} bulletpoints={web3Bulletpoints} />
       </div>
       {/*<Fillbar percentage={50} />*/}
     </div>
