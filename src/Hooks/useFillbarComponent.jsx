@@ -1,10 +1,12 @@
+import useIsMobile from "./useIsMobile";
 import React, { useState, useEffect, useRef } from 'react';
-import styles from './fillbar.module.scss';
-import useFillbarComponent from '../../hooks/useFillbarComponent'
 
-
-const Fillbar = ({ percentage,animationDuration =3.5,animationDelay=0}) => {
-    const {isVisible,setIsVisible,progress,setProgress,hovered,setHovered,fillbarRef,isMobile} = useFillbarComponent(percentage);
+const useFillbarComponent =({percentage})=>{
+    const [isVisible, setIsVisible] = useState(false);
+    const [progress, setProgress] = useState(0);
+    const [hovered,setHovered] = useState(false);
+    const fillbarRef = useRef(null);
+    const isMobile = useIsMobile();
 
     const onClick = ()=>{
         if(isMobile){
@@ -45,23 +47,9 @@ const Fillbar = ({ percentage,animationDuration =3.5,animationDelay=0}) => {
         return () => observer.disconnect();
     }, []);
 
-    return (
-        <div
-        onClick={onClick}
-        onMouseEnter={onMouseEnter}
-        onMouseLeave={onMouseLeave}
-        ref={fillbarRef} className={styles.fillbarContainer}>
-            <div
-                className={styles.filler}
-                style={{
-                    '--animation-duration': `${animationDuration}s`,
-                    '--animation-delay': `${animationDelay}s`,
-                     width: `${progress}%`
-                    }}>
-            </div>
-                <span className={`${styles.precentageNumber} ${!hovered?`${styles.precentageNumberHidden}`:``}`}>{percentage}%</span>
-        </div>
-    );
-};
+    return {isVisible,setIsVisible,progress,setProgress,hovered,setHovered,fillbarRef,isMobile}
+}
 
-export default Fillbar;
+
+
+export default useFillbarComponent;

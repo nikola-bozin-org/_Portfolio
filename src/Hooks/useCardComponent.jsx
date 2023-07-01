@@ -40,7 +40,6 @@ const useCardComponent = (isMobile, flipAnimationName, wordsToHighlight,styles) 
   };
 
   const handleClick = () => {
-    if (isMobile)
       setHovered((prevHovered) => !prevHovered);
   }
 

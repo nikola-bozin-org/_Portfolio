@@ -6,7 +6,7 @@ const Skill = ({name,precent}) => {
   return (
     <div className={styles.skill}>
     <span>{name}</span>
-    <Fillbar percentage={precent}/>
+    <Fillbar percentage={precent} animationDelay={Math.random()*2} animationDuration={Math.random()*40}/>
   </div>
   )
 }

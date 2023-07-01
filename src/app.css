@@ -74,6 +74,9 @@
     .softwareDeveloper{
         bottom: 10px;
     }
+    .cardsAndSelfWrapper{
+        padding: 0.3rem;
+    }
 }
 
 @media (max-width:370px){

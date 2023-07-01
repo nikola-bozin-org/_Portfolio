@@ -8,7 +8,7 @@ const Scrollbar = ({thumbHeight=30}) => {
 
   useEffect(() => {
     const calculateScrollDistance = () => {
-      const scrollTop = window.pageYOffset;
+      const scrollTop = window.scrollY;
       const windowHeight = window.innerHeight;
       const docHeight = getDocumentHeight();
 
