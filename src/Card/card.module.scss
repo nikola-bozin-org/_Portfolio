@@ -8,10 +8,10 @@
     max-width: 450px;
     min-width: 450px;
     transform: rotateY(90deg);
-    min-height: 450px;
+    min-height: 466px;
 
     .bold{
-        font-weight: bold;
+        font-weight: 800;
     }
 
     .cardTitle{
@@ -19,8 +19,8 @@
     }
 
     .bulletpoint{
-      font-size: 0.8rem;
-      font-size: clamp(0.8rem, 0.7000000000000001rem + 0.5vw, 1.3rem);
+      font-size: 1rem;
+      font-size: clamp(1rem, 0.94rem + 0.30000000000000004vw, 1.3rem);
     }
 
     li{
@@ -66,7 +66,7 @@
   .flippedCard {
     animation: rotateY 0.3s linear both;
     transform-style: preserve-3d;
-    color: white;
+    color: rgb(241, 241, 241);
     box-shadow: unset;
   }
 
@@ -117,11 +117,14 @@
 
 @media (max-width:500px){
   .card{
-    max-width: 300px;
+    max-width: 350px;
+    min-width: 350px;
   }
 }
-@media (max-width:500px){
+@media (max-width:360px){
   .card{
     max-width: 270px;
+    min-width: 270px;
+
   }
 }

@@ -17,8 +17,8 @@ const frontendBulletpoints = [
 ]
 const backendBulletpoints = [
   "Nodejs & express expertise.",
-  "Maintaining efficient, reliable and secure services.",
-  "Structured data oriented development.",
+  "Maintaining efficient, reliable and secure services",
+  "Structured data oriented development",
   "Proficiency in creating efficient API endpoints using MongoDB as database",
   "Experience with implementing authentication and authorization strategies, such as JWT, OAuth"
 ]
@@ -32,29 +32,32 @@ const web3Bulletpoints = [
 ]
 
 const frontendUtility = [
-
+  "Knowledge of ElectronJS, React Native, NextJS for Desktop, Mobile and SSR development",
+  "Using Framer Motion, Aos, Intersection Observer for animations",
+  "Building with Skeleton Screens for better UX",
+  "React hooks as a first-class citizen for code reusability and cleanliness"
 ]
 
 const backendUtility = [
-
+  "Utilizing Docker for unified development without complications",
+  "Implementing Websockets for requirements of real-time communication",
+  "Using Nginx as a reverse proxy for backend services in combination with CertBot for free SSL",
+  "Managing processes using PM2",
+  "Cloud Platform deployment (AWS, Digital Ocean)",
+  "GraphQL Awareness"
 ]
 
 const web3Utility = [
-
+  "Integrating Web3 wallets interactions in the browser (Metamask, Polkadot, ...)",
+  "Developing with EthersJS & Web3JS for EVM compatible blockchains",
+  "Understanding of Polkadot Ecosystem and Ink! Smart Contracts development",
+  "Using Truffle & Hardhat as local development environments",
+  "Leveraging IPFS for decentralized storage solutions",
 ]
-
-
-//fe utility
-//eljs connecting mainprocessor with render processor
-//framer motion, aos, resize observer, react native, electron,nextjs skeleton screen
-
-//be utility
-//docker, websockets, graphQL, nginx, certbot, pm2, 
-
 //web3 utility
-//Ethers, nextjs, polkadot ink!, metamask, truffle, ipfs, web3js
+//Ethers, polkadot ink!, metamask, truffle, ipfs, web3js
 
-const wordsToHighlight = ["Substrate","Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart","Contracts", "Solidity","JWT","OAuth", "authorization","authentication", "MongoDB", "oriented", "data", "reliable ", "secure","efficient", "express","Nodejs","APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
+const wordsToHighlight = ["EthersJS","Web3JS","EVM","Ink!","Truffle","Hardhat","IPFS", "Web3","Metamask","Polkadot","GraphQL", "PM2","Cloud","Platform","Nginx","CertBot","Docker","Websockets","real-time","reusability","cleanliness","hooks","Skeleton","Screens","Framer","Motion","Aos","Intersection","Observer","NextJS","ElectronJS","Native", "Substrate","Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart","Contracts", "Solidity","JWT","OAuth", "authorization","authentication", "MongoDB", "oriented", "data", "reliable ", "secure","efficient", "express","Nodejs","APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
 
 
 function App() {
