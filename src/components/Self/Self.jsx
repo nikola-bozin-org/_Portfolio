@@ -3,7 +3,7 @@ import styles from './self.module.scss';
 import Skill from '../Skill/Skill'
 const Self = () => {
   return (
-    <div data-aos='fade-up' className={styles.selfWrapper}>
+    <div data-aos='fade-in' className={styles.selfWrapper}>
     <div className={`${styles.self}`} >
       <span className={`${styles.introText}`}>Self Skills Evaluation</span>
       <div className={styles.skillsContainer}>
