@@ -5,7 +5,11 @@ import React from 'react';
 import { useEffect } from 'react';
 import Card from './Card/Card';
 import Fillbar from './Fillbar/Fillbar'
-
+import { useCallback } from "react";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import {particleOptions} from './particles'
+console.info(particleOptions)
 
 const frontendBulletpoints = [
   "JavaScript & TypeScript proficiency",
@@ -63,6 +67,18 @@ const isMobile = window.innerWidth<768;
 
 
 function App() {
+
+  const particlesInit = useCallback(async engine => {
+    console.log(engine);
+    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+}, []);
+
+const particlesLoaded = useCallback(async container => {
+    console.log(container);
+}, []);
   
   useEffect(()=>{
     Aos.init({duration:1000})
@@ -70,6 +86,7 @@ function App() {
 
   return (
     <div className='app'>
+       <Particles id="tsparticles" options={particleOptions}  init={particlesInit} loaded={particlesLoaded} />
       <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
       <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
       <div className='cards'>
