@@ -11,6 +11,7 @@ import {particleOptions} from './particles'
 import Self from './components/Self/Self';
 import { backendBulletpoints, backendUtility, frontendBulletpoints, frontendUtility, web3Bulletpoints, web3Utility, wordsToHighlight } from './miniDatabase';
 import useIsMobile from './hooks/useIsMobile'
+import Scrollbar from './components/Scrollbar/Scrollbar';
 
 function App() {
   const isMobile = useIsMobile();
@@ -24,6 +25,8 @@ function App() {
   },[])
 
   return (
+    <>
+    {!isMobile && <Scrollbar/>}
     <div className='app'>
        <Particles id="tsparticles" options={particleOptions}  init={particlesInit} />
        <div className='mainInfoContainer'>
@@ -39,6 +42,7 @@ function App() {
       <Self/>
        </div>
     </div>
+    </>
   );
 }
 
