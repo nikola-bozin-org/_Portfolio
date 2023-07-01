@@ -1,12 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './fillbar.module.scss';
+import useIsMobile from '../Hooks/useIsMobile'
 
 const Fillbar = ({ percentage }) => {
     const [isVisible, setIsVisible] = useState(false);
     const [progress, setProgress] = useState(0);
+    const [hovered,setHovered] = useState(false);
     const fillbarRef = useRef(null);
+    const isMobile = useIsMobile();
 
-    // Run animation when component is visible
+    const onClick = ()=>{
+        if(isMobile){
+            setHovered((hovered)=>!hovered)
+        }
+    }
+
+    const onMouseEnter = ()=>{
+        if(isMobile) return;
+        setHovered(true);
+    }
+    const onMouseLeave = ()=>{
+        if(isMobile) return;
+        setHovered(false);
+    }
+
     useEffect(() => {
         if (isVisible) {
             const interval = setInterval(() => {
@@ -21,28 +38,27 @@ const Fillbar = ({ percentage }) => {
         }
     }, [isVisible, percentage]);
 
-    // Setup intersection observer on mount
     useEffect(() => {
         const observer = new IntersectionObserver(entries => {
-            // entries[0] is the first (and only) entry in the array
-            // isIntersecting is true when element is visible
             setIsVisible(entries[0].isIntersecting);
         });
-
         if (fillbarRef.current) {
             observer.observe(fillbarRef.current);
         }
-
-        // Clean up observer on unmount
         return () => observer.disconnect();
     }, []);
 
     return (
-        <div ref={fillbarRef} className={styles.fillbarContainer}>
-            <div 
-                className={styles.filler} 
-                style={{ width: `${progress}%` }}
-            />
+        <div
+        onClick={onClick}
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        ref={fillbarRef} className={styles.fillbarContainer}>
+            <div
+                className={styles.filler}
+                style={{ width: `${progress}%` }}>
+            </div>
+                <span className={`${styles.precentageNumber} ${!hovered?`${styles.precentageNumberHidden}`:``}`}>{percentage}%</span>
         </div>
     );
 };
