@@ -3,8 +3,14 @@ import styles from './self.module.scss';
 
 const Self = () => {
   return (
-    <div className={`${styles.Self}`} >
-        Self
+    <div className={`${styles.self}`} >
+        Selfdwqdqddqd
+        Selfdwqdqddqd
+        Selfdwqdqddqd
+        Selfdwqdqddqd
+        Selfdwqdqddqd
+        Selfdwqdqddqd
+        Selfdwqdqddqd
     </div>
   )
 }

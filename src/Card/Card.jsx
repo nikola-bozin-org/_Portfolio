@@ -1,48 +1,11 @@
-import React, { useEffect, useState } from 'react';
 import styles from './card.module.scss';
-
+import useCardComponent from '../Hooks/useCardComponent'
 
 const Card = ({ isMobile, title,flipAnimationName,wordsToHighlight, bulletpoints = [], utilities = [] }) => {
-    const [hovered, setHovered] = useState(false);
-    const [loaded,setLoaded] = useState(false);
-    const highlightWords = (sentence) => {
-        const words = sentence.split(' ');
-        return words.map((word, i) =>
-            wordsToHighlight.includes(word.replace(',', ''))
-                ? <span key={i} className={styles.bold}>{word} </span>
-                : word + ' '
-        );
-    }
-    useEffect(()=>{
-        const binding ={
-            'flip1':1000,
-            'flip2':1500,
-            'flip3':2000,
-        }
-        const timer = setTimeout(()=>{
-            setLoaded(true);
-        },binding[flipAnimationName])
-
-        return () => clearTimeout(timer);
-    },[])
-
-    const handleMouseEnter = () => {
-        if(isMobile) return;
-        if(!loaded) return;
-        setHovered(true);
-      };
-    
-      const handleMouseLeave = () => {
-        if(isMobile) return;
-        setHovered(false);
-      };
-      const handleClick =()=>{
-        if(isMobile)
-        setHovered((hovered)=>!hovered)
-      }
-
+    const { hovered,highlightWords, loaded, handleMouseEnter, handleMouseLeave, handleClick } = useCardComponent(isMobile, flipAnimationName, wordsToHighlight,styles);
       return (
-        <div onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div
+         onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className={`${styles.card} ${styles[flipAnimationName]} ${hovered ? `${styles.flippedCard}` : `${loaded?`${styles.reverseFlippedCard}`:``}`}`}>
                 <h1 className={`${styles.cardTitle} ${hovered ? `${styles.flippedChild}` : ""}`}>{!hovered?title:`Utility`}</h1>
                 { <ul className={`${styles.bulletpoint} ${hovered ? `${styles.flippedChild}` : ""}`} style={{ textAlign: 'start' }} >
@@ -55,8 +18,6 @@ const Card = ({ isMobile, title,flipAnimationName,wordsToHighlight, bulletpoints
             </div>
         </div>
     );
-    
-    
 };
 
 

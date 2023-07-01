@@ -11,7 +11,6 @@
 .nikolaBozin{
     font-size: 2rem;
     font-size: clamp(2rem, 0.20000000000000018rem + 9vw, 11rem);
-    position: absolute;
     top: 10%;
     white-space: nowrap;
     background: linear-gradient(to bottom, gray 60%, transparent 100%);
@@ -25,10 +24,11 @@
     white-space: nowrap;
     font-size: 2rem;
     font-size: clamp(2rem, 0.20000000000000018rem + 9vw, 11rem);
-    position: absolute;
     top: 18%;
     color: rgb(255, 255, 255);
     text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.692);
+    position: relative;
+    bottom: 80px;
 }
 .cards{
     display: flex;
@@ -36,10 +36,36 @@
     justify-content: space-around;
     gap: 1rem;
     width: 100%;
-    position: absolute;
-    top: 45%;
     flex-wrap: wrap;
     padding-bottom: 1rem;
+    position: relative;
+}
+
+.mainInfoContainer{
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media (max-width:1200px){
+    .softwareDeveloper{
+        bottom: 50px;
+    }
+}
+
+@media (max-width:770px){
+    .softwareDeveloper{
+        bottom: 30px;
+    }
+}
+@media (max-width:455px){
+    .softwareDeveloper{
+        bottom: 10px;
+    }
 }
 
 @media (max-width:370px){
