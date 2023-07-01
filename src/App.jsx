@@ -3,15 +3,14 @@ import Aos from 'aos';
 import "aos/dist/aos.css";
 import React from 'react';
 import { useEffect } from 'react';
-import Card from './Card/Card';
-import Fillbar from './Fillbar/Fillbar'
+import Card from './components/Card/Card';
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import {particleOptions} from './particles'
-import Self from './Self/Self';
+import Self from './components/Self/Self';
 import { backendBulletpoints, backendUtility, frontendBulletpoints, frontendUtility, web3Bulletpoints, web3Utility, wordsToHighlight } from './miniDatabase';
-import useIsMobile from './Hooks/useIsMobile'
+import useIsMobile from './hooks/useIsMobile'
 
 function App() {
   const isMobile = useIsMobile();

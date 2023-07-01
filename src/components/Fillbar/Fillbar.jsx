@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './fillbar.module.scss';
-import useIsMobile from '../Hooks/useIsMobile'
+import useIsMobile from '../../hooks/useIsMobile'
 
 const Fillbar = ({ percentage }) => {
     const [isVisible, setIsVisible] = useState(false);

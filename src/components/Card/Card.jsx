@@ -1,5 +1,5 @@
 import styles from './card.module.scss';
-import useCardComponent from '../Hooks/useCardComponent'
+import useCardComponent from '../../hooks/useCardComponent'
 
 const Card = ({ isMobile, title,flipAnimationName,wordsToHighlight, bulletpoints = [], utilities = [] }) => {
     const { hovered,highlightWords, loaded, handleMouseEnter, handleMouseLeave, handleClick } = useCardComponent(isMobile, flipAnimationName, wordsToHighlight,styles);
