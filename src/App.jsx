@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <Scrollbar />
+      {!isMobile && <Scrollbar />}
       <div className='app'>
         <Particles id="tsparticles" options={particleOptions} init={particlesInit} />
         <div className='mainInfoContainer'>
