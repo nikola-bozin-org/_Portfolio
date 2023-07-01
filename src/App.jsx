@@ -31,13 +31,14 @@ function App() {
         <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
         <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
        </div>
+       <div className="cardsAndSelfWrapper">
       <div className='cards'>
         <Card isMobile={isMobile} utilities={frontendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend'} bulletpoints={frontendBulletpoints}/>
         <Card isMobile={isMobile} utilities={backendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip2'} title={'Backend'} bulletpoints={backendBulletpoints}/>
         <Card isMobile={isMobile} utilities={web3Utility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3'} bulletpoints={web3Bulletpoints} />
       </div>
-      {/*<Self/>*/}
-      {/*<Fillbar percentage={50} />*/}
+      <Self/>
+       </div>
     </div>
   );
 }

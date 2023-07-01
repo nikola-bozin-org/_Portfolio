@@ -1,4 +1,51 @@
-.self{
-    position: relative;
-    background-color: rebeccapurple;
+.selfWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+
+    .self {
+        background-color: rgba(255, 255, 255, 0.634);
+        color: rgb(55, 55, 55);
+        z-index: 2;
+        font-size: 1rem;
+        font-size: clamp(1rem, 0.8rem + 1vw, 2rem);
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.678);
+        text-align: center;
+        padding: 1rem;
+        box-sizing: border-box;
+        width: 100%;
+
+        .introText {
+            font-weight: 800;
+            padding-bottom: 0;
+        }
+
+        .skillsContainer {
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+    }
 }
+
+
+@media (max-width:979px){
+    .self{
+        max-width: 450px;
+    }
+}
+
+@media (max-width:500px){
+    .self{
+      max-width: 350px;
+      min-width: 350px;
+    }
+  }
+  @media (max-width:360px){
+    .self{
+      max-width: 270px;
+      min-width: 270px;
+  
+    }
+  }

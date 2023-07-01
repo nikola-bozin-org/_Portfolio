@@ -33,9 +33,9 @@
 .cards{
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content: space-evenly;
     width: 100%;
+    gap: 1rem;
     flex-wrap: wrap;
     padding-bottom: 1rem;
     position: relative;
@@ -49,6 +49,14 @@
     justify-content: center;
     text-align: center;
     flex-direction: column;
+}
+
+.cardsAndSelfWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem;
 }
 
 @media (max-width:1200px){
@@ -72,5 +80,9 @@
     .softwareDeveloper{
         text-align: center;
         white-space: unset;
+    }
+
+    .cardsAndSelfWrapper{
+        padding: 0.2rem;
     }
 }
