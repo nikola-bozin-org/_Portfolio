@@ -34,6 +34,7 @@ function App() {
           <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
           <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
         </div>
+
         <div className="cardsAndSelfWrapper">
           <div className='cards'>
             <Card isMobile={isMobile} utilities={frontendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend'} bulletpoints={frontendBulletpoints} />
@@ -41,7 +42,12 @@ function App() {
             <Card isMobile={isMobile} utilities={web3Utility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3'} bulletpoints={web3Bulletpoints} />
           </div>
           <Self />
-          <Info/>
+          <div className="sellingTexts">
+            <h1 className="sell1">Problems solved instantly!</h1>
+            <h1 className="sell2">Unrealistic done in a day!</h1>
+            <h1 className="sell3">Supernatural by appointment.</h1>
+          </div>
+          <Info />
         </div>
       </div>
     </>

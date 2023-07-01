@@ -7,9 +7,7 @@ const Fillbar = ({ percentage,animationDuration =3.5,animationDelay=0}) => {
     const {isVisible,setIsVisible,progress,setProgress,hovered,setHovered,fillbarRef,isMobile} = useFillbarComponent(percentage);
 
     const onClick = ()=>{
-        if(isMobile){
-            setHovered((hovered)=>!hovered)
-        }
+        setHovered((hovered)=>!hovered)
     }
 
     const onMouseEnter = ()=>{
