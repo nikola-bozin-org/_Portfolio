@@ -29,7 +29,7 @@
     }
 }
 
-@media (max-width:1440px){
+@media (max-width:1445px){
   .self{
     max-width: 85%;
   }
@@ -40,13 +40,20 @@
     }
 }
 
+@media (max-width:730px){
+  .self{
+    max-width: 450px;
+    min-width: 450px;
+  }
+}
+
 @media (max-width:500px){
     .self{
       max-width: 350px;
       min-width: 350px;
     }
   }
-  @media (max-width:360px){
+  @media (max-width:390px){
     .self{
       max-width: 270px;
       min-width: 270px;
