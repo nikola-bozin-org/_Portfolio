@@ -11,15 +11,16 @@ const frontendBulletpoints = [
   "JavaScript & TypeScript proficiency",
   "React - Quality, thoroughness, and best practices during development",
   "Focus on creating responsive, user-centric interfaces & exceptional product polishing",
-  "Strong skills in HTML5, CSS3 (Sass/SCSS)",
+  "Strong skills in HTML5, CSS3",
   "State management - Redux, Zustand, Context",
   "Bridging frontend with backend APIs"
 ]
 const backendBulletpoints = [
   "Nodejs & express expertise.",
-  "Maintaining efficient, reliable and secure services",
+  "Maintaining efficient, reliable and secure servers",
   "Structured data oriented development",
-  "Proficiency in creating efficient API endpoints using MongoDB as database",
+  "Proficiency in creating efficient API endpoints.",
+  "Using MongoDB as database",
   "Experience with implementing authentication and authorization strategies, such as JWT, OAuth"
 ]
 
@@ -57,7 +58,8 @@ const web3Utility = [
 //web3 utility
 //Ethers, polkadot ink!, metamask, truffle, ipfs, web3js
 
-const wordsToHighlight = ["EthersJS","Web3JS","EVM","Ink!","Truffle","Hardhat","IPFS", "Web3","Metamask","Polkadot","GraphQL", "PM2","Cloud","Platform","Nginx","CertBot","Docker","Websockets","real-time","reusability","cleanliness","hooks","Skeleton","Screens","Framer","Motion","Aos","Intersection","Observer","NextJS","ElectronJS","Native", "Substrate","Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart","Contracts", "Solidity","JWT","OAuth", "authorization","authentication", "MongoDB", "oriented", "data", "reliable ", "secure","efficient", "express","Nodejs","APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
+const wordsToHighlight = ["reliable","EthersJS","Web3JS","EVM","Ink!","Truffle","Hardhat","IPFS", "Web3","Metamask","Polkadot","GraphQL", "PM2","Cloud","Platform","Nginx","CertBot","Docker","Websockets","real-time","reusability","cleanliness","hooks","Skeleton","Screens","Framer","Motion","Aos","Intersection","Observer","NextJS","ElectronJS","Native", "Substrate","Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart","Contracts", "Solidity","JWT","OAuth", "authorization","authentication", "MongoDB", "oriented", "data", "reliable ", "secure","efficient", "express","Nodejs","APIs","Bridging","Context","Zustand","Redux","HTML5","CSS3","React","JavaScript", "TypeScript", "responsive","thoroughness","best","practices", "user-centric", "Quality"];
+const isMobile = window.innerWidth<768;
 
 
 function App() {
@@ -71,9 +73,9 @@ function App() {
       <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
       <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
       <div className='cards'>
-        <Card utilities={frontendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend Developer'} bulletpoints={frontendBulletpoints}/>
-        <Card utilities={backendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip2'} title={'Backend Developer'} bulletpoints={backendBulletpoints}/>
-        <Card utilities={web3Utility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3 Developer'} bulletpoints={web3Bulletpoints} />
+        <Card isMobile={isMobile} utilities={frontendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend'} bulletpoints={frontendBulletpoints}/>
+        <Card isMobile={isMobile} utilities={backendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip2'} title={'Backend'} bulletpoints={backendBulletpoints}/>
+        <Card isMobile={isMobile} utilities={web3Utility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3'} bulletpoints={web3Bulletpoints} />
       </div>
       {/*<Fillbar percentage={50} />*/}
     </div>

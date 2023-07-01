@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styles from './card.module.scss';
 
 
-const Card = ({ title,flipAnimationName,wordsToHighlight, bulletpoints = [], utilities = [] }) => {
+const Card = ({ isMobile, title,flipAnimationName,wordsToHighlight, bulletpoints = [], utilities = [] }) => {
     const [hovered, setHovered] = useState(false);
     const [loaded,setLoaded] = useState(false);
     const highlightWords = (sentence) => {
@@ -27,16 +27,22 @@ const Card = ({ title,flipAnimationName,wordsToHighlight, bulletpoints = [], uti
     },[])
 
     const handleMouseEnter = () => {
+        if(isMobile) return;
         if(!loaded) return;
         setHovered(true);
       };
     
       const handleMouseLeave = () => {
+        if(isMobile) return;
         setHovered(false);
       };
+      const handleClick =()=>{
+        if(isMobile)
+        setHovered((hovered)=>!hovered)
+      }
 
       return (
-        <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className={`${styles.card} ${styles[flipAnimationName]} ${hovered ? `${styles.flippedCard}` : `${loaded?`${styles.reverseFlippedCard}`:``}`}`}>
                 <h1 className={`${styles.cardTitle} ${hovered ? `${styles.flippedChild}` : ""}`}>{!hovered?title:`Utility`}</h1>
                 { <ul className={`${styles.bulletpoint} ${hovered ? `${styles.flippedChild}` : ""}`} style={{ textAlign: 'start' }} >
