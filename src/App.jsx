@@ -31,6 +31,17 @@ const web3Bulletpoints = [
   "Building on Substrate based chains using Rust",
 ]
 
+const frontendUtility = [
+
+]
+
+const backendUtility = [
+
+]
+
+const web3Utility = [
+
+]
 
 
 //fe utility
@@ -57,9 +68,9 @@ function App() {
       <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
       <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
       <div className='cards'>
-        <Card wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend Developer'} bulletpoints={frontendBulletpoints}/>
-        <Card wordsToHighlight={wordsToHighlight} flipAnimationName={'flip2'} title={'Backend Developer'} bulletpoints={backendBulletpoints}/>
-        <Card wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3 Developer'} bulletpoints={web3Bulletpoints} />
+        <Card utilities={frontendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend Developer'} bulletpoints={frontendBulletpoints}/>
+        <Card utilities={backendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip2'} title={'Backend Developer'} bulletpoints={backendBulletpoints}/>
+        <Card utilities={web3Utility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3 Developer'} bulletpoints={web3Bulletpoints} />
       </div>
       {/*<Fillbar percentage={50} />*/}
     </div>

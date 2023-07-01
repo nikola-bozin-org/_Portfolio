@@ -39,11 +39,13 @@ const Card = ({ title,flipAnimationName,wordsToHighlight, bulletpoints = [], uti
         <div onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className={`${styles.card} ${styles[flipAnimationName]} ${hovered ? `${styles.flippedCard}` : `${loaded?`${styles.reverseFlippedCard}`:``}`}`}>
                 <h1 className={`${styles.cardTitle} ${hovered ? `${styles.flippedChild}` : ""}`}>{!hovered?title:`Utility`}</h1>
-                <ul className={`${styles.bulletpoint} ${hovered ? `${styles.flippedChild}` : ""}`} style={{ textAlign: 'start' }} >
-                    {bulletpoints.map((point, index) => (
+                { <ul className={`${styles.bulletpoint} ${hovered ? `${styles.flippedChild}` : ""}`} style={{ textAlign: 'start' }} >
+                    {!hovered? bulletpoints.map((point, index) => (
+                        <li key={index}>{highlightWords(point)}</li>
+                    )):utilities.map((point, index) => (
                         <li key={index}>{highlightWords(point)}</li>
                     ))}
-                </ul>
+                </ul>}
             </div>
         </div>
     );
