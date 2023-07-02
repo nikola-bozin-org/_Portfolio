@@ -8,7 +8,7 @@ const Self = () => {
       <span className={`${styles.introText}`}>Self Skills Evaluation</span>
       <div className={styles.skillsContainer}>
         <Skill name={"Frontend"} precent={87}/>
-        <Skill name={"Backend"} precent={89}/>
+        <Skill name={"Backend"} precent={81}/>
         <Skill name={"Web3"} precent={79}/>
       </div>
     </div>
