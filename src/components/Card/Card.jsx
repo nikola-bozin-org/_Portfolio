@@ -1,5 +1,6 @@
 import styles from './card.module.scss';
 import useCardComponent from '../../hooks/useCardComponent'
+import rotate from '../../images/rotate.png'
 
 const Card = ({ isMobile, title,flipAnimationName,wordsToHighlight, bulletpoints = [], utilities = [] }) => {
     const { hovered,highlightWords, loaded, handleMouseEnter, handleMouseLeave, handleClick } = useCardComponent(isMobile, flipAnimationName, wordsToHighlight,styles);
@@ -7,6 +8,7 @@ const Card = ({ isMobile, title,flipAnimationName,wordsToHighlight, bulletpoints
         <div
          onClick={handleClick} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className={`${styles.card} ${styles[flipAnimationName]} ${hovered ? `${styles.flippedCard}` : `${loaded?`${styles.reverseFlippedCard}`:``}`}`}>
+                    <img src={rotate} className={`${styles.rotateImg} ${hovered?`${styles.rotateImgHover}`:``}`}  />
                 <h1 className={`${styles.cardTitle} ${hovered ? `${styles.flippedChild}` : ""}`}>{!hovered?title:`Utility`}</h1>
                 { <ul className={`${styles.bulletpoint} ${hovered ? `${styles.flippedChild}` : ""}`} style={{ textAlign: 'start' }} >
                     {!hovered? bulletpoints.map((point, index) => (
