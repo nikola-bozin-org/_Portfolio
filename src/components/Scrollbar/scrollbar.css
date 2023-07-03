@@ -1,11 +1,11 @@
 .scrollbar {
     position: fixed;
     right: 0;
-    width: 0.7rem;
-    background: #ccc;
+    width: 0.2rem;
+    background: #cccccc;
     z-index: 2;
     margin-right: 1rem;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.284);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 1);
   }
   
   .thumb {

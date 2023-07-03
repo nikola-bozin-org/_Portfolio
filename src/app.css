@@ -34,7 +34,7 @@
 .cards{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 100%;
     gap: 1rem;
     flex-wrap: wrap;

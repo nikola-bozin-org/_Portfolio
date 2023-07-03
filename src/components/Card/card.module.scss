@@ -1,120 +1,131 @@
-.card{
-    transform: rotateY(0deg);
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
-    color: rgb(55, 55, 55);
-    text-align: center;
-    padding: 1rem;
-    box-sizing: border-box;
-    max-width: 450px;
-    min-width: 450px;
-    transform: rotateY(90deg);
-    min-height: 466px;
-    background-color: rgba(255, 255, 255, 0.675);
-    position: relative;
-    .bold{
-        font-weight: 800;
-    }
+.card {
+  transform: rotateY(0deg);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  color: rgb(55, 55, 55);
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  max-width: 450px;
+  min-width: 450px;
+  transform: rotateY(90deg);
+  min-height: 466px;
+  background-color: rgba(255, 255, 255, 0.675);
+  position: relative;
 
-    .cardTitle{
-        padding-bottom: 1rem;
-    }
-
-    .bulletpoint{
-      font-size: 1rem;
-      font-size: clamp(1rem, 0.94rem + 0.30000000000000004vw, 1.3rem);
-    }
-
-    li{
-        padding: 0.2rem;
-    }
-    .flippedChild {
-      transform: rotateY(180deg);
+  .bold {
+    font-weight: 800;
   }
-  .rotateImg{
-    width:30px;
+
+  .cardTitle {
+    padding-bottom: 1rem;
+  }
+
+  .bulletpoint {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.94rem + 0.30000000000000004vw, 1.3rem);
+  }
+
+  li {
+    padding: 0.2rem;
+  }
+
+  .flippedChild {
+    transform: rotateY(180deg);
+  }
+
+  .rotateImg {
+    width: 30px;
     height: 30px;
     position: absolute;
     left: 3px;
     bottom: 3px;
   }
 
-  .rotateImgHover{
+  .rotateImgHover {
     filter: invert(100%);
   }
-  
+
 }
 
 @keyframes flip {
-    from {
-      transform: rotateY(90deg);
-    }
-    to {
-      transform: rotateY(0deg);
-    }
+  from {
+    transform: rotateY(90deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
 }
+
 .flip1 {
-    animation: flip 0.4s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 1s;
-  }
+  animation: flip 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
 .flip2 {
-    animation: flip 0.4s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 1.5s;
+  animation: flip 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
 }
+
 .flip3 {
-    animation: flip 0.4s ease-in-out;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+  animation: flip 0.4s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 2s;
 }
-  .flippedCard {
-    animation: rotateY 0.3s linear both;
-    transform-style: preserve-3d;
-    color: rgb(241, 241, 241);
-    box-shadow: unset;
-  }
-  .reverseFlippedCard {
-    animation: reverseRotateY 0.3s linear both;
-    transform-style: preserve-3d;
-  }
-  @keyframes rotateY {
-    0% {
-      transform: rotateY(0deg);
-    }
-  
-    50% {
-      transform: rotateY(90deg);
-      background-color: rgb(55, 55, 55);
-    }
-  
-    100% {
-      transform: rotateY(180deg);
-      background-color: rgb(55, 55, 55);
-    }
-  }
-  @keyframes reverseRotateY {
-    0% {
-      transform: rotateY(180deg);
-    }
-  
-    50% {
-      transform: rotateY(90deg);
-    }
-  
-    100% {
-      transform: rotateY(0deg);
-    }
+
+.flippedCard {
+  animation: rotateY 0.3s linear both;
+  transform-style: preserve-3d;
+  color: rgb(241, 241, 241);
+  box-shadow: unset;
+}
+
+.reverseFlippedCard {
+  animation: reverseRotateY 0.3s linear both;
+  transform-style: preserve-3d;
+}
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
   }
 
+  50% {
+    transform: rotateY(90deg);
+    background-color: rgb(55, 55, 55);
+  }
 
-@media (max-width:500px){
-  .card{
+  100% {
+    transform: rotateY(180deg);
+    background-color: rgb(55, 55, 55);
+  }
+}
+
+@keyframes reverseRotateY {
+  0% {
+    transform: rotateY(180deg);
+  }
+
+  50% {
+    transform: rotateY(90deg);
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@media (max-width:500px) {
+  .card {
     max-width: 350px;
     min-width: 350px;
   }
 }
-@media (max-width:390px){
-  .card{
+
+@media (max-width:390px) {
+  .card {
     max-width: 270px;
     min-width: 270px;
 
