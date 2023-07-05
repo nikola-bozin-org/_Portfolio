@@ -27,7 +27,7 @@ export const frontendUtility = [
     "Knowledge of ElectronJS, React Native, NextJS for Desktop, Mobile and SSR development",
     "Using Framer Motion, Aos, Intersection Observer for animations",
     "Building with Skeleton Screens for better UX",
-    "React hooks as a first-class citizen for code reusability and cleanliness",
+    "React hooks & reducers as a first-class citizen for code reusability and cleanliness",
     "Asana & Trello for tasks managment"
 ]
 export const backendUtility = [
@@ -45,4 +45,4 @@ export const web3Utility = [
     "Using Truffle & Hardhat as local development environments",
     "Leveraging IPFS for decentralized storage solutions",
 ]
-export const wordsToHighlight = ["Asana","Trello","Postman","Git","Github","reliable", "EthersJS", "Web3JS", "EVM", "Ink!", "Truffle", "Hardhat", "IPFS", "Web3", "Metamask", "Polkadot", "GraphQL", "PM2", "Cloud", "Platform", "Nginx", "CertBot", "Docker", "Websockets", "real-time", "reusability", "cleanliness", "hooks", "Skeleton", "Screens", "Framer", "Motion", "Aos", "Intersection", "Observer", "NextJS", "ElectronJS", "Native", "Substrate", "Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart", "Contracts", "Solidity", "JWT", "OAuth", "authorization", "authentication", "MongoDB", "oriented", "data", "reliable ", "secure", "efficient", "express", "Nodejs", "APIs", "Bridging", "Context", "Zustand", "Redux", "HTML5", "CSS3", "React", "JavaScript", "TypeScript", "responsive", "thoroughness", "best", "practices", "user-centric", "Quality"];
+export const wordsToHighlight = ["reducers","Asana","Trello","Postman","Git","Github","reliable", "EthersJS", "Web3JS", "EVM", "Ink!", "Truffle", "Hardhat", "IPFS", "Web3", "Metamask", "Polkadot", "GraphQL", "PM2", "Cloud", "Platform", "Nginx", "CertBot", "Docker", "Websockets", "real-time", "reusability", "cleanliness", "hooks", "Skeleton", "Screens", "Framer", "Motion", "Aos", "Intersection", "Observer", "NextJS", "ElectronJS", "Native", "Substrate", "Rust", "EIP", "OpenZeppelin", "ChainLink", "testing", "Smart", "Contracts", "Solidity", "JWT", "OAuth", "authorization", "authentication", "MongoDB", "oriented", "data", "reliable ", "secure", "efficient", "express", "Nodejs", "APIs", "Bridging", "Context", "Zustand", "Redux", "HTML5", "CSS3", "React", "JavaScript", "TypeScript", "responsive", "thoroughness", "best", "practices", "user-centric", "Quality"];
