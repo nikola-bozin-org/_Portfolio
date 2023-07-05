@@ -40,6 +40,7 @@
     flex-wrap: wrap;
     padding-bottom: 1rem;
     position: relative;
+    align-items: stretch;
 }
 
 .sellingTexts{
