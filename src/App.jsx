@@ -20,8 +20,6 @@ function App() {
   const isMobile = useIsMobile();
   const [scrollPos, setScrollPos] = useState(0);
   const [darkmode, setDarkMode] = useState(false);
-  const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [parallax, setParallax] = useState(0);
   
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
@@ -59,7 +57,7 @@ function App() {
         </div>
         <div
           onClick={() => { setDarkMode(darkmode => !darkmode) }}
-          className={`iconDiv`}
+          className={`iconDiv ${darkmode?`wb`:``}`}
           style={{ left: `${10 - scrollPos * (200 / 150)}px` }}
         >
           {darkmode ? <img src={sun} alt="mode" className="moon" /> : <img src={moon} alt="mode" className="sun" />}
