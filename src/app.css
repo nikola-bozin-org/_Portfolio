@@ -73,7 +73,7 @@
     justify-content: center;
     z-index: 2;
     background-color: black;
-    transition: 1s ease-in-out;
+    transition: 0.6s ease-in-out;
 }
 
 .iconDiv img {
