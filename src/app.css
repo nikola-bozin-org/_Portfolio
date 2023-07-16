@@ -58,6 +58,7 @@
 }
 
 .darkmodeExpand {
+    pointer-events: none;
     transform: scale(100);
 }
 
