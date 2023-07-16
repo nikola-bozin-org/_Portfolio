@@ -18,7 +18,11 @@ import sun from './images/sun.png'
 
 function App() {
   const isMobile = useIsMobile();
-
+  const [scrollPos, setScrollPos] = useState(0);
+  const [darkmode, setDarkMode] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [parallax, setParallax] = useState(0);
+  
   const particlesInit = useCallback(async engine => {
     await loadFull(engine);
   }, []);
@@ -27,7 +31,16 @@ function App() {
     Aos.init({ duration: 1000 })
   }, [])
 
-  const [darkmode, setDarkMode] = useState(false);
+  useEffect(() => {
+    const onScroll = () => {
+      let currentScrollPos = window.scrollY;
+      setScrollPos(currentScrollPos <= 150 ? currentScrollPos : 150);
+    };
+
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
 
   return (
     <>
@@ -38,11 +51,17 @@ function App() {
           <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
           <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
         </div>
-        <div onClick={() => { setDarkMode(darkmode => !darkmode) }}
-          className={`${darkmode ? 'darkmode darkmodeExpand' : 'darkmode'}`}>
+        <div
+          onClick={() => { setDarkMode(darkmode => !darkmode) }}
+          className={`${darkmode ? 'darkmode darkmodeExpand' : 'darkmode'}`}
+          style={{ left: `${10 - scrollPos * (200 / 150)}px` }}
+        >
         </div>
-        <div className={`iconDiv`}>
-          <img src={darkmode ? sun : moon} alt="mode" />
+        <div
+          className={`iconDiv`}
+          style={{ left: `${10 - scrollPos * (200 / 150)}px` }}
+        >
+          {darkmode ? <img src={sun} alt="mode" className="moon" /> : <img src={moon} alt="mode" className="sun" />}
         </div>
         <div className="cardsAndSelfWrapper">
           <div className='cards'>
