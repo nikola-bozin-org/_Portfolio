@@ -1,7 +1,7 @@
 import './app.css'
 import Aos from 'aos';
 import "aos/dist/aos.css";
-import React from 'react';
+import React, { useState } from 'react';
 import { useEffect } from 'react';
 import Card from './components/Card/Card';
 import { useCallback } from "react";
@@ -13,6 +13,8 @@ import { backendBulletpoints, backendUtility, frontendBulletpoints, frontendUtil
 import useIsMobile from './hooks/useIsMobile'
 import Scrollbar from './components/Scrollbar/Scrollbar';
 import Info from './components/Info/Info';
+import moon from './images/moon.png'
+import sun from './images/sun.png'
 
 function App() {
   const isMobile = useIsMobile();
@@ -25,6 +27,8 @@ function App() {
     Aos.init({ duration: 1000 })
   }, [])
 
+  const [darkmode, setDarkMode] = useState(false);
+
   return (
     <>
       {!isMobile && <Scrollbar />}
@@ -34,7 +38,12 @@ function App() {
           <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
           <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
         </div>
-
+        <div onClick={() => { setDarkMode(darkmode => !darkmode) }}
+          className={`${darkmode ? 'darkmode darkmodeExpand' : 'darkmode'}`}>
+        </div>
+        <div className={`iconDiv`}>
+          <img src={darkmode ? sun : moon} alt="mode" />
+        </div>
         <div className="cardsAndSelfWrapper">
           <div className='cards'>
             <Card isMobile={isMobile} utilities={frontendUtility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip1'} title={'Frontend'} bulletpoints={frontendBulletpoints} />
