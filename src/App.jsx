@@ -52,12 +52,13 @@ function App() {
           <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
         </div>
         <div
-          onClick={() => { setDarkMode(darkmode => !darkmode) }}
+          
           className={`${darkmode ? 'darkmode darkmodeExpand' : 'darkmode'}`}
           style={{ left: `${10 - scrollPos * (200 / 150)}px` }}
         >
         </div>
         <div
+          onClick={() => { setDarkMode(darkmode => !darkmode) }}
           className={`iconDiv`}
           style={{ left: `${10 - scrollPos * (200 / 150)}px` }}
         >
