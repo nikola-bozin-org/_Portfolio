@@ -10,11 +10,12 @@ import { loadFull } from "tsparticles";
 import { particleOptions } from './particles'
 import Self from './components/Self/Self';
 import { backendBulletpoints, backendUtility, frontendBulletpoints, frontendUtility, web3Bulletpoints, web3Utility, wordsToHighlight } from './miniDatabase';
-import useIsMobile from './hooks/useIsMobile'
+import useIsMobile from './Hooks/useIsMobile'
 import Scrollbar from './components/Scrollbar/Scrollbar';
 import Info from './components/Info/Info';
 import moon from './images/moon.png'
 import sun from './images/sun.png'
+import TechStack from './components/TechStack/TechStack';
 
 function App() {
   const isMobile = useIsMobile();
@@ -69,6 +70,7 @@ function App() {
             <Card isMobile={isMobile} utilities={web3Utility} wordsToHighlight={wordsToHighlight} flipAnimationName={'flip3'} title={'Web3'} bulletpoints={web3Bulletpoints} />
           </div>
           <Self />
+            <TechStack darkmode={darkmode}/>
           <div className="sellingTexts">
             <h1 className="sell1">Problems solved instantly!</h1>
             <h1 className="sell2">Unrealistic done in a day!</h1>

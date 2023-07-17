@@ -1,5 +1,5 @@
 import styles from './card.module.scss';
-import useCardComponent from '../../hooks/useCardComponent'
+import useCardComponent from '../../Hooks/useCardComponent'
 import rotate from '../../images/rotate.png'
 
 const Card = ({ isMobile, title,flipAnimationName,wordsToHighlight, bulletpoints = [], utilities = [] }) => {

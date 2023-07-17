@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './fillbar.module.scss';
-import useFillbarComponent from '../../hooks/useFillbarComponent'
+import useFillbarComponent from '../../Hooks/useFillbarComponent'
 
 
 const Fillbar = ({ percentage,animationDuration =3.5,animationDelay=0}) => {

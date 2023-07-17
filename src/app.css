@@ -34,7 +34,8 @@
 .cards{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-items: center;
+    justify-content: space-evenly;
     width: 100%;
     gap: 1rem;
     flex-wrap: wrap;
@@ -97,7 +98,6 @@
     padding: 2rem;
     flex-direction: column;
     box-sizing: border-box;
-    margin-top: 2rem;
     text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
     font-size: 0.9rem;
     font-size: clamp(0.9rem, 0.86rem + 0.2000000000000001vw, 1.1rem);
@@ -120,6 +120,7 @@
     justify-content: center;
     flex-direction: column;
     padding: 2rem;
+    max-width: 80%;
 }
 
 @media (max-width:1200px){
