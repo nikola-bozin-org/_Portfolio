@@ -28,6 +28,10 @@ function App() {
 
   useEffect(() => {
     Aos.init({ duration: 1000 })
+    const isDarkmode = localStorage.getItem('darkmode');
+    if(isDarkmode==='true'){
+      setDarkMode(true);
+    }
   }, [])
 
   useEffect(() => {
@@ -40,6 +44,9 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(()=>{
+    localStorage.setItem('darkmode',darkmode)
+  },[darkmode])
 
   return (
     <>
