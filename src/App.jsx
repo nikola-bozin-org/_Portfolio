@@ -83,6 +83,7 @@ function App() {
             <h1 className="sell2">Unrealistic done in a day!</h1>
             <h1 className="sell3">Supernatural by appointment.</h1>
           </div>
+          <h1 className='inDev'>Currently building new portfolio <a className='inDevLink' target='_blank' href='https://n-ext.vercel.app'> website.</a></h1>
           <Info />
         </div>
       </div>

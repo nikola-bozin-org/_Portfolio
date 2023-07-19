@@ -129,6 +129,20 @@
     max-width: 80%;
 }
 
+
+.inDev{
+    z-index: 11;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    mix-blend-mode:difference;
+    color: rgb(171, 171, 171);
+    text-align: center;
+}
+
+.inDevLink{
+    color: inherit;
+}
+
 @media (max-width:1200px){
     .softwareDeveloper{
         bottom: 50px;
