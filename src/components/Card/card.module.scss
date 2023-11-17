@@ -12,6 +12,9 @@
   background-color: rgba(255, 255, 255, 0.675);
   position: relative;
   flex: 1;
+  backface-visibility:visible;
+  -moz-backface-visibility: visible;
+  -webkit-backface-visibility: visible;
 
   .bold {
     font-weight: 800;
