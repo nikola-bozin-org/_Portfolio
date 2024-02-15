@@ -55,7 +55,7 @@ function App() {
         <Particles id="tsparticles" options={particleOptions} init={particlesInit} />
         <div className='mainInfoContainer'>
           <span data-aos='fade-in' className='nikolaBozin'>Nikola Bozin</span>
-          <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Developer</span>
+          <span data-aos='fade-in' data-aos-delay={300} className='softwareDeveloper'>Software Engineer</span>
         </div>
         <div
           
